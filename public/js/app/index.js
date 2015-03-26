@@ -1,3 +1,6 @@
 $(document).ready( function(){
-	alert("index - ready");
+	
+	_.each(["1","2","3"], function( item ){
+		console.log( "Count:", item );
+	});
 } );
