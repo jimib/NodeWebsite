@@ -1,0 +1,14 @@
+include ./mixins.jade
+
+html
+	head
+	
+		block head
+	body
+	
+		block body
+	
+		+addScript("/js/jquery.js")
+		+addScript("/js/knockout.js")
+		+addScript("/js/underscore.js")
+		block footer
