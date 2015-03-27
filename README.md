@@ -65,7 +65,7 @@ helper/layout-default.jade also imports helper/mixins.jade, this contains a coll
 
 #Mixins
 Mixins are just Jade Functions. They're useful for repetative tasks such as add scripts and stylesheets. You could use them for anything but
-they are a limited in some respects so don't be overly reliant on them. I find them useful things like:
+they are a limited in some respects so don't be overly reliant on them. I find them useful for things like:
 
 1. Adding buttons, just create a simple mixin that accepts a href and a label.
 2. Creating a gallery from an array of images.
