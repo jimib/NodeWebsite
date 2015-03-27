@@ -3,27 +3,27 @@ A stripped back Node app for building simple webpages.
 There is no backend to support this app, it just serves files from the public directory and renders jade files from the views directory
 
 #Installation
-1) Pull the git repo
-2) Install the dependent node modules
+1. Pull the git repo
+2. Install the dependent node modules
 npm install -d
-3) Run the app
+3. Run the app
 node app
-4) Lanuch browser
+4. Lanuch browser
 http://localhost:4000/
 
 #Structure
 Refer to app.js:
 
-'''javascript
+```javascript
 app.get("/", renderPage );
 app.get("/:viewName", renderPage );
-'''
+```
 
 Any requests for '/' or '/*' will be filtered through the function renderPage.
 The renderPage will only write (render) a response if it finds a matching Jade file.
 If next is called, then Node skips to the next handler in the queue to see if it can handle the response.
 
-'''
+```
 function renderPage( req, res, next ){
 	//based on the viewName - if undefined default to index
 	var viewName = req.params.viewName || "index";
@@ -38,7 +38,7 @@ function renderPage( req, res, next ){
 		}
 	} );
 }
-'''
+```
 
 #Req, Res and Next
 We are using Express which is fundamentally a routing library. It receives requests and based on the path passes them through
@@ -71,16 +71,16 @@ they are a limited in some respects so don't be overly reliant on them. I find t
 3) Adding/importing dependencies such as Javascript and Stylesheets
 4) Website elements that are repeated in mulitple places (e.g. contact details, telephone number)
 e.g.
-'''
+```
 mixin addContactDetails()
   p Tel: 0161 123 1234
   p Email: hello@pixelinspiration.net
-'''
+```
 Can be referenced then anywhere like this
-'''
+```
 div
    +addContactDetails()
-'''
+```
 Add all your mixins to a single file so that you can re-use them anywhere. 
 
 
